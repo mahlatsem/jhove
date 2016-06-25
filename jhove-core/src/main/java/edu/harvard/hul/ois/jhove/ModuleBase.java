@@ -874,7 +874,7 @@ public abstract class ModuleBase
     public Property addIntegerProperty (String name, int value,
                        String [] labels)
     {
-        if (!_je.getShowRawFlag ()) {
+        if (_je != null && !_je.getShowRawFlag ()) {
             try {
                 return new Property (name, PropertyType.STRING, labels[value]);
             }
